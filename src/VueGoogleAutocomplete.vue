@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    const ADDRESS_COMPONENTS = {
+    const ADDRESS_COMPONENTS_DEFAULT = {
         subpremise : 'short_name',
         street_number: 'short_name',
         route: 'long_name',
@@ -64,6 +64,11 @@
           geolocationOptions: {
             type: Object,
             default: null
+          },
+
+          ADDRESS_COMPONENTS: {
+            type: Object,
+            default: ADDRESS_COMPONENTS_DEFAULT
           }
         },
 
@@ -310,8 +315,8 @@
                 for (let i = 0; i < place.address_components.length; i++) {
                     let addressType = place.address_components[i].types[0];
 
-                    if (ADDRESS_COMPONENTS[addressType]) {
-                        let val = place.address_components[i][ADDRESS_COMPONENTS[addressType]];
+                    if (this.props.ADDRESS_COMPONENTS[addressType]) {
+                        let val = place.address_components[i][this.props.ADDRESS_COMPONENTS[addressType]];
                         returnData[addressType] = val;
                     }
                 }
