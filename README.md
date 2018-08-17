@@ -23,16 +23,10 @@ This component uses Google Maps Places API to get geo suggests for autocompletio
 
 To obtain API key please visit the [Google Developer Console](https://console.developers.google.com). The API's that you have to enable in your Google API Manager Dashboard are [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/start), [Google Places API Web Service](https://developers.google.com/places/web-service/) and [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/).
 
-The easiest way to use Vue Google Autocomplete is to install it from **npm** or **yarn**.
+The easiest way to use Vue Google Autocomplete is to install it from **npm**.
 
 ```sh
-npm install vue-google-autocomplete --save
-```
-
-Or
-
-```sh
-yarn add vue-google-autocomplete
+npm install npm i vue-google-autocomplete-iliya-fork --save
 ```
 
 ## Usage
